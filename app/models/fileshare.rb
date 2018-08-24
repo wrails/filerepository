@@ -1,0 +1,2 @@
+class Fileshare < ApplicationRecord
+end

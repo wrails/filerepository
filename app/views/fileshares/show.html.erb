@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @fileshare.category %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @fileshare.title %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @fileshare.keywords %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @fileshare.description %>
+</p>
+
+<p>
+  <strong>File:</strong>
+  <%= @fileshare.file %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @fileshare.image %>
+</p>
+
+<%= link_to 'Edit', edit_fileshare_path(@fileshare) %> |
+<%= link_to 'Back', fileshares_path %>
