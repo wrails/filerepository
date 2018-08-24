@@ -69,6 +69,6 @@ class FilesharesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fileshare_params
-      params.require(:fileshare).permit(:category, :title, :keywords, :description, :file, :image)
+      params.require(:fileshare).permit(:category, :title, :keyword, :description, :file, :image, :all_categories, :all_keywords)
     end
 end

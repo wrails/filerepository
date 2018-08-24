@@ -18,7 +18,7 @@ class FilesharesTest < ApplicationSystemTestCase
     fill_in "Description", with: @fileshare.description
     fill_in "File", with: @fileshare.file
     fill_in "Image", with: @fileshare.image
-    fill_in "Keywords", with: @fileshare.keywords
+    fill_in "Keyword", with: @fileshare.keyword
     fill_in "Title", with: @fileshare.title
     click_on "Create Fileshare"
 
@@ -34,7 +34,7 @@ class FilesharesTest < ApplicationSystemTestCase
     fill_in "Description", with: @fileshare.description
     fill_in "File", with: @fileshare.file
     fill_in "Image", with: @fileshare.image
-    fill_in "Keywords", with: @fileshare.keywords
+    fill_in "Keyword", with: @fileshare.keyword
     fill_in "Title", with: @fileshare.title
     click_on "Update Fileshare"
 

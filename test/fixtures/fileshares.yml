@@ -3,7 +3,7 @@
 one:
   category: MyString
   title: MyString
-  keywords: MyString
+  keyword: MyString
   description: MyString
   file: MyString
   image: MyString
@@ -11,7 +11,7 @@ one:
 two:
   category: MyString
   title: MyString
-  keywords: MyString
+  keyword: MyString
   description: MyString
   file: MyString
   image: MyString

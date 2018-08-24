@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_24_124451) do
+ActiveRecord::Schema.define(version: 2018_08_24_141352) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2018_08_24_124451) do
   create_table "fileshares", force: :cascade do |t|
     t.string "category"
     t.string "title"
-    t.string "keywords"
+    t.string "keyword"
     t.string "description"
     t.string "file"
     t.string "image"

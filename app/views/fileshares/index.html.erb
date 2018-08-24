@@ -7,20 +7,19 @@
     <tr>
       <th>Category</th>
       <th>Title</th>
-      <th>Keywords</th>
+      <th>Keyword</th>
       <th>Description</th>
       <th>File</th>
       <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @fileshares.each do |fileshare| %>
       <tr>
-        <td><%= fileshare.category %></td>
+        <td><%= fileshare.all_categories%></td>
         <td><%= fileshare.title %></td>
-        <td><%= fileshare.keywords %></td>
+        <td><%= fileshare.all_keywords%></td>
         <td><%= fileshare.description %></td>
         <td><%= fileshare.file %></td>
         <td><%= fileshare.image %></td>
