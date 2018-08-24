@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_24_122825) do
+ActiveRecord::Schema.define(version: 2018_08_24_124451) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categorings", force: :cascade do |t|
+    t.integer "category_id"
+    t.integer "fileshare_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_categorings_on_category_id"
+    t.index ["fileshare_id"], name: "index_categorings_on_fileshare_id"
+  end
 
   create_table "fileshares", force: :cascade do |t|
     t.string "category"
@@ -21,6 +36,30 @@ ActiveRecord::Schema.define(version: 2018_08_24_122825) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "keywordings", force: :cascade do |t|
+    t.integer "keyword_id"
+    t.integer "fileshare_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["fileshare_id"], name: "index_keywordings_on_fileshare_id"
+    t.index ["keyword_id"], name: "index_keywordings_on_keyword_id"
+  end
+
+  create_table "keywords", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sharings", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "fileshare_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["fileshare_id"], name: "index_sharings_on_fileshare_id"
+    t.index ["user_id"], name: "index_sharings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
